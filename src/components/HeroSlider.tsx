@@ -8,18 +8,19 @@ import "./HeroSlider.css";
 
 export default function HeroSlider() {
   return (
-    <Swiper
-      modules={[Autoplay, Pagination]}
-      autoplay={{ delay: 3000 }}
-      pagination={{ clickable: true }}
-      loop
-    >
-      <SwiperSlide>
-        <img src={banner1} className="w-full h-[500px] object-cover" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={banner2} className="w-full h-[500px] object-cover" />
-      </SwiperSlide>
-    </Swiper>
+    <div>
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 3000 }}
+        pagination={{ clickable: true }}
+      >
+        <SwiperSlide>
+          <img src={banner1} className="w-full" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={banner2} className="w-full" />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 }
