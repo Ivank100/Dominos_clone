@@ -5,6 +5,7 @@ import HomePage from "./components/Homepage";
 import Footer from "./components/footer";
 import Tracking from "./components/Tracking";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Aboutus from "./components/Aboutus";
 
 export default function App() {
   const [hamburger, sethamburger] = useState(false);
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tracking" element={<Tracking />} />
+          <Route path="/about" element={<Aboutus />} />
         </Routes>
         <Footer />
       </div>

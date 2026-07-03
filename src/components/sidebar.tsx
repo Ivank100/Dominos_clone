@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Sidebar({
   sethamburger,
 }: {
   sethamburger: (val: boolean) => void;
 }) {
+  const location = useLocation();
   return (
     <div className="bg-white z-50 flex w-64 h-screen absolute p-5 gap-10 flex-col">
       <div className="flex justify-end">
@@ -62,7 +64,12 @@ export default function Sidebar({
             d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
           />
         </svg>
-        <Link to="/" onClick={() => sethamburger(false)}>
+        <Link
+          to="/"
+          onClick={() => sethamburger(false)}
+          className=""
+          style={location.pathname === "/" ? { color: "#006491" } : {}}
+        >
           Home
         </Link>
       </div>
@@ -83,7 +90,12 @@ export default function Sidebar({
             d="M12 6v2m0 0l-3 6m3-6l3 6m-6 0a3 3 0 100 6 3 3 0 000-6zm6 0a3 3 0 100 6 3 3 0 000-6zM9 12h6"
           />
         </svg>
-        <Link to="/tracking" onClick={() => sethamburger(false)}>
+        <Link
+          to="/tracking"
+          onClick={() => sethamburger(false)}
+          className=""
+          style={location.pathname === "/tracking" ? { color: "#006491" } : {}}
+        >
           Track your Order
         </Link>
       </div>
@@ -131,7 +143,14 @@ export default function Sidebar({
           <circle cx="9" cy="13" r="1" fill="currentColor" />
           <circle cx="13" cy="15" r="1" fill="currentColor" />
         </svg>
-        About Us
+        <Link
+          to="/about"
+          onClick={() => sethamburger(false)}
+          className=""
+          style={location.pathname === "/about" ? { color: "#006491" } : {}}
+        >
+          About Us
+        </Link>
       </div>
       <div className="flex flex-start gap-2 border-b pb-2">
         {/* Phone icon */}
