@@ -5,7 +5,7 @@ export default function Footer() {
         className="flex flex-col items-center p-4 gap-5 text-white"
         style={{ borderTop: "5px solid #9d2235", backgroundColor: "#53565a" }}
       >
-        <div className="flex justify-around w-full p-4">
+        <div className="flex justify-around w-full p-4 md:justify-center md: gap-6">
           {/* Facebook */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
