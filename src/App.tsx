@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import Tracking from "./components/Tracking";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Aboutus from "./components/Aboutus";
+import FindStore from "./components/FindStore";
 
 export default function App() {
   const [hamburger, sethamburger] = useState(false);
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/tracking" element={<Tracking />} />
           <Route path="/about" element={<Aboutus />} />
+          <Route path="/search-store" element={<FindStore />} />
         </Routes>
         <Footer />
       </div>

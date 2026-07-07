@@ -116,7 +116,16 @@ export default function Sidebar({
             d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m5-9v9m4-9v9m5-9l2 9"
           />
         </svg>
-        Find a Store
+        <Link
+          to="/search-store"
+          onClick={() => sethamburger(false)}
+          className=""
+          style={
+            location.pathname === "/search-store" ? { color: "#006491" } : {}
+          }
+        >
+          Find a Store
+        </Link>
       </div>
       <div className="flex flex-start gap-2 border-b pb-2">
         {/* Pizza icon */}
